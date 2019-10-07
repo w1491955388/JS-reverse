@@ -4,13 +4,13 @@
 import execjs.runtime_names
 
 
-class WeXin(object):
+class IQiYi(object):
     """
     爱奇艺 登陆密码解析
     """
 
     @staticmethod
-    def make_pwd(pwd):
+    def getpwd(pwd):
         with open("iqiyi_encryption.js", "r", encoding="utf-8") as f:
             ctx = execjs.compile(f.read())
 
@@ -19,5 +19,5 @@ class WeXin(object):
 
 
 if __name__ == '__main__':
-    pdd = WeXin()
-    pdd.make_pwd('666666')
+    pwd = IQiYi()
+    pwd.getpwd('666666')
